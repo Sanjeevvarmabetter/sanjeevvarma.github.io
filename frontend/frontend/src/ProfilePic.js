@@ -1,12 +1,11 @@
 import React from "react";
 import './ProfilePic.css';
-
 function ProfilePic() {
     return (
         <div className="profile-picture-container">
         <img
         className="profile-picture"
-        src="photo.jpg"
+        src="\src\photo.jpg"
         alt ="Your Picture"
         />
         </div>
