@@ -1,0 +1,38 @@
+
+/* Image Card container */
+.image-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  margin: 20px;
+  max-width: 300px;
+}
+
+/* Image styles */
+.image-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+/* Title styles */
+.image-card h2 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  color: #333;
+}
+
+/* Description styles */
+.image-card p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .image-card {
+    max-width: 100%;
+  }
+}
