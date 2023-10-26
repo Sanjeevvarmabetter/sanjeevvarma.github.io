@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'ckeditor'
 ]
 
-MIDDLEWARE = [
+    MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -132,6 +132,24 @@ import os
 
 STATIC_ROOT = os.path.join(BASE_DIR,'static')
 
+MEDIA_URL = '/media'
+MEDIA_ROOT = BASE_DIR / 'media'
 
+#ckeditor settings
+
+CKEDITOR_UPLOAD_PATH = 'uploads/'
+CKEDITOR_IMAGE_BACKEND = "pillow"
+CKEDITOR_JQUERY_URL = '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js' 
+
+CKEDITOR_CONFIGS = {
+    'default':
+        {
+            'toolbar': 'full',
+            'width': 'auto',
+            'extraPlugins': ','.join([
+                'codesnippet',
+            ]),
+        },
+}
 
 
