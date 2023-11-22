@@ -1,6 +1,10 @@
 from django.db import models
 from django.contrib.auth.models import User
 from ckeditor.fields import RichTextField
+
+#to create thumbnails
+from imagekit.models import ImageSpecField
+from imagekit.processors import ResizeToFill
 # Create your models here.
 
 
@@ -17,7 +21,13 @@ class Post(models.Model):
     updated_on  = models.DateTimeField(auto_now = True)
     # content = models.TextField()
     content = RichTextField()
-    thumbnail = models.ImageField(upload_to='thumbnails/')
+    image = models.ImageField(upload_to="post_images")
+    image_thumbnail = ImageSpecField(source='image',
+                                     processors=[ResizeToFill(100,50)],
+                                     format='JPEG',
+                                     options={'quality':60})
+    
+    # thumbnail = models.ImageField(upload_to='thumbnails/', null=True, blank=True)
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
 

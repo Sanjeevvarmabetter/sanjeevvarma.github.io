@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog',
-    'ckeditor'
+    'ckeditor',
+    'imagekit'
 ]
 
 MIDDLEWARE = [
@@ -135,6 +136,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
+
+
 # ckeditor settings
 CKEDITOR_UPLOAD_PATH = 'uploads/'
 CKEDITOR_IMAGE_BACKEND = "pillow"
@@ -149,5 +152,6 @@ CKEDITOR_CONFIGS = {
         ]),
     },
 }
+
 
 
