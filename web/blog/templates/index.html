@@ -38,8 +38,8 @@
             {%for post in post_list%}
             <div class="card mb-4">
                 <div class="post_thumbnail post_item">
-                    {% if post.thumbnail %}
-                        <img class="post_thumbnail_img" src="{{ post.thumbnail.url }}" alt="{{ post.title }} thumbnail">
+                    {% if post.image_thumbnail %}
+                        <img class="post_thumbnail_img" src="{{ post.image_thumbnail.url }}" alt="{{ post.title }} thumbnail">
                     {% endif %}
                 <!-- {% if post.thumbnail %}
                     <img src="{{ post.thumbnail.url }}" class="card-img-top" alt="{ post.title} thumbnail">
