@@ -8,7 +8,7 @@
         background-color: #fdfdfd;
     }
     .head_text {
-        color: black;
+        color: rgb(209, 35, 35);
     }
     .card {
         box-shadow: 0 100px 100px #E3E7EB;
@@ -37,19 +37,12 @@
         <div class="col-md-8 mt-3 left">
             {%for post in post_list%}
             <div class="card mb-4">
-                <div class="post_thumbnail post_item">
-                    {% if post.image_thumbnail %}
-                        <img class="post_thumbnail_img" src="{{ post.image_thumbnail.url }}" alt="{{ post.title }} thumbnail">
-                    {% endif %}
-                <!-- {% if post.thumbnail %}
-                    <img src="{{ post.thumbnail.url }}" class="card-img-top" alt="{ post.title} thumbnail">
-                {% endif %} -->
                 <div class="card-body">
                     <h2 class="card-title">{{ post.title }}</h2>
                     <p class="card-text text-muted h6">{{post.author}} | {{post.created_on}}</p>
                     <p class="card-text">{{post.content|slice:":200"}}</p>
 
-                    <a href="{% url 'post_detail' post.slug  %}" class="btn btn-primary">Read More &rarr;</a>
+                <p class="card-text">{{ post.content|striptags }}</p>
                 </div>
             </div>
             {% endfor %}
