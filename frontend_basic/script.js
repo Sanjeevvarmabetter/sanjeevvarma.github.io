@@ -11,7 +11,7 @@ particlesJS("particles-js", {
       opacity: {
         value: 0.5,
         random: true,
-        anim: { enable: false, speed: 1, opacity_min: 0.1, sync: false }
+        anim: { enable: false, speed: 25, opacity_min: 0.1, sync: false }
       },
       size: {
         value: 10,
@@ -20,14 +20,14 @@ particlesJS("particles-js", {
       },
       line_linked: {
         enable: false,
-        distance: 500,
+        distance: 300,
         color: "#ffffff",
         opacity: 0.4,
         width: 2
       },
       move: {
         enable: true,
-        speed: 6,
+        speed: 877,
         direction: "bottom",
         random: false,
         straight: false,
