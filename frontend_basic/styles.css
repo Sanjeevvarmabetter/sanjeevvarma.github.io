@@ -27,12 +27,23 @@ body {
 
     overflow: hidden;
     margin-right: 40px; /* change this for space between profile picture and text card*/
+
+    /*border for the profile picture*/
+    border: 15px solid #6e00f5;
+    /* box-sizing: border-box; */
+    /* border-image: linear-gradient(to right,#e30505,#000);
+    border-image-slice: 1;
+    box-sizing: border-box;
+    mask-image: radial-gradient(circle at center, transparent 50%, black 51%); */
+
+
 }
 
 .profile-picture {
     width: 100%;
     height: auto;
     display: block;
+    /* border: 6px solid rgb(85, 21, 21)fff; */
 }
 
 
