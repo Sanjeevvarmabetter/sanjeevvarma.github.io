@@ -8,7 +8,7 @@
         background-color: #fdfdfd;
     }
     .head_text {
-        color: rgb(209, 35, 35);
+        color: rgb(49, 97, 151);
     }
     .card {
         box-shadow: 0 100px 100px #E3E7EB;
@@ -41,8 +41,6 @@
                     <h2 class="card-title">{{ post.title }}</h2>
                     <p class="card-text text-muted h6">{{post.author}} | {{post.created_on}}</p>
                     <p class="card-text">{{post.content|slice:":200"}}</p>
-
-                <p class="card-text">{{ post.content|striptags }}</p>
                 </div>
             </div>
             {% endfor %}
