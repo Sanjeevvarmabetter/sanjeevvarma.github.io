@@ -1,0 +1,24 @@
+{% extends "base.html" % }
+
+{% block content %}
+
+<style>
+    .info-container{
+    margin: 50px;
+    padding: 220px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    }
+</style>
+
+<div class = "container info-container">
+
+    <h1>Hello </h1>
+    <p>this is my front page</p>
+
+
+    <a href="{% url 'blog' %}" class="btn btn-primary">this is my blog</a>
+</div>
+
+{% endblock content %}
+
