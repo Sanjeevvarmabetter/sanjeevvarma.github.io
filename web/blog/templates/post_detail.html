@@ -1,13 +1,23 @@
-{%extends 'base.html' %} {% block content %} 
+{% extends 'base.html' %}
 
+{% block content %}
 <div class="container">
     <div class="row">
-        <div class="col-md-8 card mb-4  mt-3 left  top">
+        <div class="col-md-8 card mb-4 mt-3 left top">
             <div class="card-body">
-                <h1>{%block title%} {{object.title}} {%endblock title%}</h1>
-                <p class=" text-muted">{{ post.author }} | {{ post.created_on }}</p>
-                <p class="card-text ">{{ object.content | safe }}</p>
+                <h1>{% block title %} {{ object.title }} {% endblock title %}</h1>
+                <p class="text-muted">{{ post.author }} | {{ post.created_on }}</p>
+                <p class="card-text">{{ object.content | safe }}</p>
+            </div>
+        </div>
     </div>
 </div>
 
+
+<footer class="py-3 bg-grey">
+    <p class="m-0 text-dark text-center">Copyright &copy; SANJEEV VARMA</p>
+</footer>
 {% endblock content %}
+
+{% block footer %}
+{% endblock footer %}
